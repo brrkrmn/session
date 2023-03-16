@@ -1,0 +1,4 @@
+.playgroundWrapper {
+    border: 2px solid green;
+    flex-grow: 3;
+}

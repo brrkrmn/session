@@ -1,13 +1,9 @@
 import React from 'react';
-import Menu from './Menu';
-import SessionPlayground from './SessionPlayground';
+import ContentWrapper from './ContentWrapper';
 
 function App() {
   return (
-    <>
-      <Menu />
-      <SessionPlayground />
-    </>
+    <ContentWrapper />
   );
 }
 

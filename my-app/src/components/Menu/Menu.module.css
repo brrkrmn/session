@@ -1,0 +1,30 @@
+.menu {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #BBD6B8;
+}
+
+.button:hover {
+    background-color: #AEC2B6;
+}
+
+.icon {
+    color: #94AF9F;
+    stroke-width: 2.5px;
+}

@@ -5,7 +5,7 @@ import { XCircle } from 'react-feather';
 function CategoryModal() {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.backdrop}></div>
+      <div className={styles.backdrop} />
       <div className={styles.dialog}>
         <form className={styles.form}>
           <label htmlFor="category-name">

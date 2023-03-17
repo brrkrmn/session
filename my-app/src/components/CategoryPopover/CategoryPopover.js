@@ -1,12 +1,13 @@
 import React from 'react';
 import { ChevronDown, XCircle, Plus } from 'react-feather';
 import * as Popover from '@radix-ui/react-popover';
-import useToggle from '../../hooks/useToggle';
+import { CategoryContext } from '../CategoryProvider';
 import styles from './Popover.module.css';
 
-function CategoryPopover({ handleAddCategories, categories }) {
+
+function CategoryPopover() {
+  const { categories } = React.useContext(CategoryContext);
   const [selectedCategory, setSelectedCategory] = React.useState();
-  const [isModalOpen, toggleIsModalOpen] = useToggle(false);
   
   return (
     <Popover.Root>
@@ -38,7 +39,7 @@ function CategoryPopover({ handleAddCategories, categories }) {
             <XCircle />
           </Popover.Close>
 
-          <button onClick={toggleIsModalOpen} className={styles.addButton}>
+          <button className={styles.addButton}>
             <Plus />
           </button>
 

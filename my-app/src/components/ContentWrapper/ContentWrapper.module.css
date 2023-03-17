@@ -2,5 +2,5 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    align-items: center;
   }

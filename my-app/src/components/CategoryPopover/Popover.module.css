@@ -90,4 +90,6 @@
     transform: rotate(90deg);
 }
 
-
+.input {
+    accent-color: green;
+}

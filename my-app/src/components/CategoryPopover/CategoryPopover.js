@@ -17,23 +17,28 @@ function CategoryPopover({ toggleIsModalOpen }) {
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Content className={styles.content}>
-          {categories.map((category) => {
-            return (
-              <div key={category.id}>
-                <input
-                  type="radio"
-                  name="category"
-                  id={category.id}
-                  value={category.name}
-                  checked={selectedCategory === category}
-                  onChange={event => {
-                    setSelectedCategory(event.target.value)
-                  }}
-                />
-                <label htmlFor={category}>{category.name}</label>
-              </div>  
-            )
-          })}
+          <form>
+            {categories.map((category) => {
+              return (
+                <div key={category.id}>
+                  <input
+                    
+                    className={styles.input}
+                    type="radio"
+                    name="category"
+                    id={category.id}
+                    value={category.name}
+                    checked={selectedCategory === category.name}
+                    onChange={event => {
+                      setSelectedCategory(event.target.value)
+                    }}
+                  />
+                  <label htmlFor={category}>{category.name}</label>
+                </div>  
+              )
+            })}
+          </form>
+          
 
           <Popover.Close className={styles.closeButton}>
             <XCircle />

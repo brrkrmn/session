@@ -1,45 +1,13 @@
 import React from 'react';
+import { TimerContext } from '../TimerProvider';
+import styles from './Timer.module.css';
 
 function Timer() {
-  // working || paused || stopped
-  const [isPaused, setIsPaused] = React.useState(false);
-  const [count, setCount] = React.useState(0);
-  
-  React.useEffect(() => {
-    if (!isPaused) {
-      const intervalId = window.setInterval(() => {
-        setCount((currentCount) => currentCount + 1);
-      }, 1000);
-
-      return () => {
-        window.clearInterval(intervalId);
-      }
-    }
-  }, [isPaused])
-
-  function resumeTimer() {
-    setIsPaused(false);
-  }
-
-  function pauseTimer() {
-    setIsPaused(true);
-  }
-
-  function stopTimer() {
-    setIsPaused(true);
-    setCount(0);
-  }
-  
+  const { count } = React.useContext(TimerContext);
   return (
-    <>
-      <div>{count}</div>
-      <button onClick={resumeTimer}>Resume</button>
-      <button onClick={pauseTimer}>Pause</button>
-      <button onClick={stopTimer}>Stop</button>
-      <div>{isPaused}</div> 
-    </>
-  
-  
+    <div className={styles.timer}>
+      {count}
+    </div>  
   );
 }
 

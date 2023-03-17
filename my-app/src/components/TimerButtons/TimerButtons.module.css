@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 20%;
+    background-color: #94AF9F;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button svg {
+    width: 40px;
+    height: 40px;
+    stroke-width: 2;
+    text-align: center;
+
+    color: #D9D9D9;
+}

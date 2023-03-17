@@ -17,6 +17,7 @@ function CategoryProvider({ children }) {
     }
     const nextCategories = [...categories, nextCategory];
     setCategories(nextCategories);
+    console.log(categories);
   }
 
   return (

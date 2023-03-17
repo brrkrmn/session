@@ -5,7 +5,7 @@ import { CategoryContext } from '../CategoryProvider';
 import styles from './Popover.module.css';
 
 
-function CategoryPopover() {
+function CategoryPopover({ toggleIsModalOpen }) {
   const { categories } = React.useContext(CategoryContext);
   const [selectedCategory, setSelectedCategory] = React.useState();
   
@@ -39,7 +39,7 @@ function CategoryPopover() {
             <XCircle />
           </Popover.Close>
 
-          <button className={styles.addButton}>
+          <button onClick={toggleIsModalOpen} className={styles.addButton}>
             <Plus />
           </button>
 

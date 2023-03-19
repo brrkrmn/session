@@ -90,6 +90,28 @@
     transform: rotate(90deg);
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.legend {
+    color:#6f8377
+}
+.categoryItem {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .input {
-    accent-color: green;
+    accent-color:#94AF9F;
+}
+
+.label {
+    padding: 0px 8px;
+    background-color: #94AF9F;
+    border-radius: 8px;
+    color:#3d4640
 }

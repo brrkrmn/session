@@ -32,30 +32,32 @@ function CategoryModal({ toggleIsModalOpen }) {
           <div className={styles.backdrop} />
           <div className={styles.dialog}>
             <form onSubmit={handleSubmit} className={styles.form}>
-              <label htmlFor="category-name">
-                Category Name:
-              </label>
+              <legend className={styles.legend}>New Category</legend>
               <input 
                 ref={inputRef}
                 id="category-name"
                 value={newCategoryName}
+                placeholder="Name"
                 onChange={event => {
                   setNewCategoryName(event.target.value)
                 }}
               />
 
-              <label htmlFor="category-color">Color</label>
-              <input 
-                type="color" 
-                id="category-color"
-                value={newCategoryColor}
-                onChange={event => {
-                  setNewCategoryColor(event.target.value)
-                }}
-              />
+              <label htmlFor="category-color">
+                Color:
+                <input 
+                  type="color" 
+                  id="category-color"
+                  value={newCategoryColor}
+                  onChange={event => {
+                    setNewCategoryColor(event.target.value)
+                  }}
+                />
+              </label>
+              
               <button className={styles.saveButton}>
-              Add Category
-            </button>
+                Add
+              </button>
             </form>
 
             <button onClick={toggleIsModalOpen} className={styles.closeButton}>

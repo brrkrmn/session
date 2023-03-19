@@ -17,12 +17,12 @@ function CategoryPopover({ toggleIsModalOpen }) {
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Content className={styles.content}>
-          <form>
+          <form className={styles.form}>
+            <legend className={styles.legend}>Select Category</legend>
             {categories.map((category) => {
               return (
-                <div key={category.id}>
+                <div className={styles.categoryItem} key={category.id}>
                   <input
-                    
                     className={styles.input}
                     type="radio"
                     name="category"
@@ -33,7 +33,7 @@ function CategoryPopover({ toggleIsModalOpen }) {
                       setSelectedCategory(event.target.value)
                     }}
                   />
-                  <label htmlFor={category}>{category.name}</label>
+                  <label htmlFor={category} className={styles.label}>{category.name}</label>
                 </div>  
               )
             })}

@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: center;
 }
+.button:hover {
+    background-color: #6f8377;
+}
 
 .button svg {
     width: 40px;
